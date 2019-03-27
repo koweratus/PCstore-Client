@@ -91,6 +91,12 @@ public class BookController implements Initializable, CrudActions {
         this.showBooks();
     }
 
+    @FXML
+    public void onClickAddBooks() {
+        Book book = new Book();
+        StageUtil.showAddBookStage(book);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

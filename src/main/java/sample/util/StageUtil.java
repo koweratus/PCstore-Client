@@ -33,6 +33,16 @@ public class StageUtil {
         stager.getStage().show();
     }
 
+    public static void showAddBookStage(Book book){
+        Stager stager = getStager("book_add.fxml", "Add book");
+
+        AddBookController addBookController = stager.getLoader().getController();
+        addBookController.setBook(book);
+        addBookController.init();
+
+        stager.getStage().show();
+    }
+
     public static void showAllAuthorsStage() {
         Stager stager = getStager("authors_view.fxml", "Show all authors");
 

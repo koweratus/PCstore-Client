@@ -23,7 +23,8 @@ public class BookDao implements CrudDao<Book> {
     }
 
     public HttpStatus addItem(Book item) {
-        return null;
+        ResponseEntity<Book> response = restApi.postForEntity(RestAPI.URL_PATH + "/books", item, Book.class);
+        return response.getStatusCode();
     }
 
     public void updateItem(Book item) {
