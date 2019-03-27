@@ -25,7 +25,8 @@ public class AuthorDao implements CrudDao<Author>{
 
     @Override
     public HttpStatus addItem(Author item) {
-        return null;
+        ResponseEntity<Author> response = restApi.postForEntity(RestAPI.URL_PATH + "/authors", item, Author.class);
+        return response.getStatusCode();
     }
 
     @Override

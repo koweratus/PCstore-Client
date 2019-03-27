@@ -109,6 +109,12 @@ public class AuthorController implements Initializable, CrudActions {
         this.showAuthors();
     }
 
+    @FXML
+    public void onClickAddAuthor() {
+        Author author = new Author();
+        StageUtil.showAddAuthorStage(author);
+    }
+
     @Override
     public void onSelectClicked(int index) {
 

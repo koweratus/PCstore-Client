@@ -6,10 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import route.Route;
-import sample.controllers.AuthorController;
-import sample.controllers.BookController;
-import sample.controllers.EditAuthorController;
-import sample.controllers.EditBookController;
+import sample.controllers.*;
 import sample.models.Author;
 import sample.models.Book;
 
@@ -26,6 +23,16 @@ public class StageUtil {
 
     }
 
+    public static void showEditBookStage(Book book){
+        Stager stager = getStager("book_edit.fxml", "Edit book");
+
+        EditBookController editBookController = stager.getLoader().getController();
+        editBookController.setBook(book);
+        editBookController.init();
+
+        stager.getStage().show();
+    }
+
     public static void showAllAuthorsStage() {
         Stager stager = getStager("authors_view.fxml", "Show all authors");
 
@@ -37,7 +44,7 @@ public class StageUtil {
     }
 
     public static void showEditAuthorStage(Author author){
-        Stager stager = getStager("author_edit.fxml", "Edit book");
+        Stager stager = getStager("author_edit.fxml", "Edit author");
 
         EditAuthorController editAuthorController = stager.getLoader().getController();
         editAuthorController.setAuthor(author);
@@ -46,15 +53,18 @@ public class StageUtil {
         stager.getStage().show();
     }
 
-    public static void showEditBookStage(Book book){
-        Stager stager = getStager("book_edit.fxml", "Edit book");
+    public static void showAddAuthorStage(Author author){
+        Stager stager = getStager("author_add.fxml", "Add author");
 
-        EditBookController editBookController = stager.getLoader().getController();
-        editBookController.setBook(book);
-        editBookController.init();
+        AddAuthorController addAuthorController = stager.getLoader().getController();
+        addAuthorController.setAuthor(author);
+        addAuthorController.init();
 
         stager.getStage().show();
     }
+
+
+
 
 
     private static Stager getStager(String view, String title){
