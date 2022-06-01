@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="206.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddBookController">
+<AnchorPane prefHeight="206.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.EditComponentController">
    <children>
       <GridPane layoutY="2.0" prefHeight="143.0" prefWidth="402.0">
         <columnConstraints>
@@ -21,15 +21,15 @@
         </rowConstraints>
          <children>
             <Label text="Title" GridPane.halignment="CENTER" />
-            <TextField fx:id="titleBook" GridPane.columnIndex="1" />
+            <TextField fx:id="titleComponent" GridPane.columnIndex="1" />
             <Label prefHeight="27.0" prefWidth="75.0" text="Description" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <TextField fx:id="descriptionBook" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="descriptionComponent" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label prefHeight="27.0" prefWidth="40.0" text="Type" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <ComboBox fx:id="type" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-            <ComboBox fx:id="authors" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Label prefHeight="27.0" prefWidth="50.0" text="Author" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <ComboBox fx:id="manafacturers" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label prefHeight="27.0" prefWidth="50.0" text="Manafacturer" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
          </children>
       </GridPane>
-      <Button fx:id="saveBook" layoutX="68.0" layoutY="165.0" mnemonicParsing="false" onAction="#onClickSaveBook" text="Save" />
+      <Button fx:id="saveComponent" layoutX="68.0" layoutY="165.0" mnemonicParsing="false" onAction="#onClickSaveComponent" text="Save" />
    </children>
 </AnchorPane>

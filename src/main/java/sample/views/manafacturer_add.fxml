@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="206.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.EditAuthorController">
+<AnchorPane prefHeight="206.0" prefWidth="448.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AddManafacturerController">
    <children>
       <GridPane layoutY="2.0" prefHeight="143.0" prefWidth="402.0">
         <columnConstraints>
@@ -20,12 +20,10 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Firstname" GridPane.halignment="CENTER" />
-            <TextField fx:id="firstnameAuthor" GridPane.columnIndex="1" />
-            <Label prefHeight="27.0" prefWidth="75.0" text="Lastname" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
-            <TextField fx:id="lastnameAuthor" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Company" GridPane.halignment="CENTER" />
+            <TextField fx:id="company" GridPane.columnIndex="1" />
          </children>
       </GridPane>
-      <Button fx:id="saveAuthor" layoutX="68.0" layoutY="165.0" mnemonicParsing="false" onAction="#onClickSaveAuthor" text="Save" />
+      <Button fx:id="saveManafacturer" layoutX="68.0" layoutY="165.0" mnemonicParsing="false" onAction="#onClickSaveManafacturer" text="Save" />
    </children>
 </AnchorPane>

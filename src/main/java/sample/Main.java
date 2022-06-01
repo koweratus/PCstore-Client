@@ -17,20 +17,16 @@ public class Main extends Application {
         primaryStage.setTitle("Home page");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
-
-
-
-//        StageUtil.showAllBooksStage();
     }
 
     @FXML
-    private void onAllBooksBtnClick() {
-        StageUtil.showAllBooksStage();
+    private void onAllComponentsBtnClick() {
+        StageUtil.showAllComponentsStage();
     }
 
     @FXML
-    private void onAllAuthorsBtnClick() {
-        StageUtil.showAllAuthorsStage();
+    private void onAllManafacturerBtnClick() {
+        StageUtil.showAllManafacturerStage();
     }
 
 

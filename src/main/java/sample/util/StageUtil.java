@@ -7,68 +7,68 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import route.Route;
 import sample.controllers.*;
-import sample.models.Author;
-import sample.models.Book;
+import sample.models.Manafacturer;
+import sample.models.Component;
 
 public class StageUtil {
 
 
-    public static void showAllBooksStage() {
-        Stager stager = getStager("books_view.fxml", "Show all books");
+    public static void showAllComponentsStage() {
+        Stager stager = getStager("component_view.fxml", "Show all components");
 
-        BookController bookController = stager.getLoader().getController();
-        bookController.init();
-
-        stager.getStage().show();
-
-    }
-
-    public static void showEditBookStage(Book book){
-        Stager stager = getStager("book_edit.fxml", "Edit book");
-
-        EditBookController editBookController = stager.getLoader().getController();
-        editBookController.setBook(book);
-        editBookController.init();
-
-        stager.getStage().show();
-    }
-
-    public static void showAddBookStage(Book book){
-        Stager stager = getStager("book_add.fxml", "Add book");
-
-        AddBookController addBookController = stager.getLoader().getController();
-        addBookController.setBook(book);
-        addBookController.init();
-
-        stager.getStage().show();
-    }
-
-    public static void showAllAuthorsStage() {
-        Stager stager = getStager("authors_view.fxml", "Show all authors");
-
-        AuthorController authorController = stager.getLoader().getController();
-        authorController.init();
+        ComponentController componentController = stager.getLoader().getController();
+        componentController.init();
 
         stager.getStage().show();
 
     }
 
-    public static void showEditAuthorStage(Author author){
-        Stager stager = getStager("author_edit.fxml", "Edit author");
+    public static void showEditComponentStage(Component component){
+        Stager stager = getStager("component_edit.fxml", "Edit component");
 
-        EditAuthorController editAuthorController = stager.getLoader().getController();
-        editAuthorController.setAuthor(author);
-        editAuthorController.init();
+        EditComponentController editComponentController = stager.getLoader().getController();
+        editComponentController.setComponent(component);
+        editComponentController.init();
 
         stager.getStage().show();
     }
 
-    public static void showAddAuthorStage(Author author){
-        Stager stager = getStager("author_add.fxml", "Add author");
+    public static void showAddComponentStage(Component component){
+        Stager stager = getStager("component_add.fxml", "Add component");
 
-        AddAuthorController addAuthorController = stager.getLoader().getController();
-        addAuthorController.setAuthor(author);
-        addAuthorController.init();
+        AddComponentController addComponentController = stager.getLoader().getController();
+        addComponentController.setComponent(component);
+        addComponentController.init();
+
+        stager.getStage().show();
+    }
+
+    public static void showAllManafacturerStage() {
+        Stager stager = getStager("manafacturer_view.fxml", "Show all manafacturer");
+
+        ManafacturerController manafacturerController = stager.getLoader().getController();
+        manafacturerController.init();
+
+        stager.getStage().show();
+
+    }
+
+    public static void showEditManafacturerStage(Manafacturer manafacturer){
+        Stager stager = getStager("manafacturer_edit.fxml", "Edit manafacturer");
+
+        EditManafacturerController editManafacturerController = stager.getLoader().getController();
+        editManafacturerController.setManafacturer(manafacturer);
+        editManafacturerController.init();
+
+        stager.getStage().show();
+    }
+
+    public static void showAddManafacturerStage(Manafacturer manafacturer){
+        Stager stager = getStager("manafacturer_add.fxml", "Add manafacturer");
+
+        AddManafacturerController addManafacturerController = stager.getLoader().getController();
+        addManafacturerController.setManafacturer(manafacturer);
+        addManafacturerController.init();
 
         stager.getStage().show();
     }

@@ -2,19 +2,21 @@ package sample.models;
 
 import java.util.Date;
 
-public class Book {
+public class Component {
     private Long id;
-    private Author author;
+    private Manafacturer manafacturer;
     private String title;
     private String description;
     private Type type;
     private Date createdAt;
 
+
     public static enum Type {
-        DRAMA,
-        ACTION,
-        SCIENCE,
-        NOVEL
+        GPU,
+        CPU,
+        MOBO,
+        RAM,
+        PSU
     }
 
     public Long getId() {
@@ -25,12 +27,12 @@ public class Book {
         this.id = id;
     }
 
-    public Author getAuthor() {
-        return author;
+    public Manafacturer getManafacturer() {
+        return manafacturer;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setManafacturer(Manafacturer manafacturer) {
+        this.manafacturer = manafacturer;
     }
 
     public String getTitle() {
@@ -60,12 +62,11 @@ public class Book {
     public Date getCreatedAt() {
         return createdAt;
     }
+    public String getCompany() {
+        return this.manafacturer.getCompany();
+    }
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
-    }
-
-    public String getFullName() {
-        return this.author.getFirstname() + " " + this.author.getLastname();
     }
 }

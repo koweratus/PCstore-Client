@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="401.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.ComponentController">
+   <children>
+      <TableView fx:id="componentTable" layoutX="1.0" layoutY="119.0" prefHeight="282.0" prefWidth="692.0">
+        <columns>
+          <TableColumn fx:id="company" prefWidth="98.0" text="Company" />
+          <TableColumn fx:id="title" prefWidth="121.0" text="Title" />
+            <TableColumn fx:id="description" prefWidth="186.0" text="Description" />
+            <TableColumn fx:id="type" minWidth="0.0" prefWidth="126.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button fx:id="refreshComponents" layoutX="307.0" layoutY="31.0" mnemonicParsing="false" onAction="#onClickRefreshComponent" text="Refresh" />
+      <Button fx:id="addComponent" layoutX="20.0" layoutY="65.0" mnemonicParsing="false" onAction="#onClickAddComponent" text="Add component" />
+   </children>
+</AnchorPane>

@@ -12,7 +12,7 @@ public class RestAPI {
     private static RestAPI instance = new RestAPI();
     private List<HttpMessageConverter<?>> messageConverters;
     public RestTemplate restTemplate;
-    public final static String URL_PATH = "http://localhost:9999/api";
+    public final static String URL_PATH = "http://localhost:8080/api";
 
     private RestAPI(){
         messageConverters = new ArrayList<>();
